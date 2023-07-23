@@ -1,7 +1,7 @@
 [versions]
 minSdk = "21"
-targetSdk = "34"
-compileSdk = "34"
+targetSdk = "33"
+compileSdk = "33"
 
 composeCompiler = "1.5.0"
 compose = "1.4.3"
@@ -56,15 +56,14 @@ coil-kt = { group = "io.coil-kt", name = "coil", version.ref = "coil" }
 coil-kt-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
 coil-kt-svg = { group = "io.coil-kt", name = "coil-svg", version.ref = "coil" }
 
-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines" }
+kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
 
 ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
 ktor-client-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor" }
 ktor-client-okHttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
 ktor-client-serialization = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
 ktor-client-contentNegotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
-ktor-client-mock = { module = "io.ktor:ktor-client-mock", version.ref = "ktor" }
 
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-test-annotation = { module = "org.jetbrains.kotlin:kotlin-test-annotations-common", version.ref = "kotlin" }
@@ -97,20 +96,44 @@ presentation = [
     "compose-material",
     "compose-activity",
     "compose-navigation",
-    "hilt-android",
     "androidx-hilt-navigation-compose",
     "google-accompanist-insets",
     "google-accompanist-systemuicontroller",
     "google-accompanist-navigation-animation",
-    "coil-kt-compose"
+    "coil-kt-compose",
+    "logger"
 ]
 
 domain = [
-    "hilt-compiler",
     "kotlinx-dateTime",
-    "kotlinx-collections-immutable"
+    "kotlinx-collections-immutable",
 ]
 
 data = [
+    "androidx-core",
+    "kotlinx-dateTime",
+    "kotlinx-coroutines-android",
+    "kotlinx-coroutines-core",
+    "kotlinx-collections-immutable",
+]
 
+network = [
+    "coil-kt",
+    "coil-kt-svg",
+    "kotlinx-coroutines-core",
+    "kotlinx-coroutines-android",
+    "kotlinx-dateTime",
+    "ktor-client-core",
+    "ktor-client-serialization",
+    "ktor-client-okHttp",
+    "ktor-client-logging",
+    "ktor-client-contentNegotiation",
+    "logger"
+]
+
+hilt = [
+    "hilt-compiler",
+    "hilt-ext-compiler",
+    "hilt-ext-work",
+    "hilt-android"
 ]
